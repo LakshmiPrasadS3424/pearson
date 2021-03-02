@@ -1,0 +1,396 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --light-bg: #f5f5f5;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #777;
+    --link: #0087a7;
+    --font: 'Poppins', sans-serif;
+    --pink: #bf176c;
+}
+
+* {
+    outline: 0;
+}
+
+body {
+    background: var(--light-bg);
+    overflow: hidden;
+    font-family: var(--font);
+}
+
+a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: none;
+}
+
+figure {
+    margin: 0;
+}
+
+.navbar-toggler {
+    border: 0;
+    outline: 0;
+    padding: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: inherit;
+}
+
+.container {
+    padding: 0 16px;
+    max-width: 100%;
+}
+
+main {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 6%), 0 4px 6px -1px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.card .card-img-top {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+    border-radius: 8px;
+}
+
+/* header */
+
+header {
+    position: fixed;
+    height: 70px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    background: var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+}
+
+header .container {
+    padding: 0 20px 0 16px
+}
+
+header .btn-secondary {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background: var(--pink);
+    border: none;
+    padding: 0;
+    line-height: 50px;
+}
+
+header .btn-secondary:focus {
+    box-shadow: inherit;
+}
+
+header .bi-question-circle {
+    font-size: 30px;
+    color: var(--link);
+    margin-right: 20px;
+    line-height: 50px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    right: 0;
+    left: inherit;
+}
+
+.nav-tabs {
+    flex-wrap: nowrap;
+}
+
+.nav-tabs .nav-link {
+    border: 0;
+    border-bottom: 3px solid transparent;
+    flex-wrap: nowrap;
+}
+
+.nav-tabs {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border: 0;
+}
+
+.nav-tabs .nav-link:hover {
+    border: 0;
+    border-bottom: 3px solid var(--pink);
+}
+
+.nav-tabs .nav-link.active {
+    border: 0;
+    background: transparent;
+    border-bottom: 3px solid var(--pink);
+}
+
+/* aside */
+
+aside {
+    width: 250px;
+    background: var(--white);
+    border-right: 1px solid #eee;
+    height: 100vh;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    transition: all .3s;
+}
+
+aside.active {
+    width: 60px;
+}
+
+.menu span {
+    font-size: 20px;
+    margin-left: 10px;
+    display: block;
+    line-height: 1;
+    margin: -3px 0 0 10px;
+}
+
+aside span {
+    white-space: nowrap;
+    transition: all .3s;
+    font-size: 16px;
+}
+
+aside.active span {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+aside ul li {
+    padding: 0 16px;
+    border-left: 3px solid transparent;
+    white-space: nowrap;
+}
+
+aside ul li.active,
+aside ul li:hover {
+    border-color: var(--link);
+}
+
+aside ul li.active a,
+aside ul li:hover a,
+aside ul li:hover i {
+    color: var(--link);
+}
+
+aside ul li a {
+    color: var(--gray);
+    transition: all .2s;
+    display: block;
+    padding: 10px 0;
+}
+
+aside ul li a i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+aside ul li a:hover {
+    color: var(--link);
+}
+
+aside.active+.content-wrapper {
+    margin-left: 60px;
+}
+
+.menu {
+    padding: 16px;
+}
+
+.menu i {
+    cursor: pointer;
+    font-size: 28px;
+}
+
+/* content wrapper */
+
+.content-wrapper {
+    padding: 30px;
+    flex: 1;
+    margin-left: 250px;
+    height: inherit;
+    overflow-y: auto;
+    transition: all .3s;
+}
+
+.content-wrapper .row {
+    max-width: 80%;
+}
+
+.tab-content .card {
+    min-height: 114px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin: 0;
+    line-height: 26px;
+}
+
+.search-sec {
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.search form {
+    border: none;
+    background: var(--white);
+    padding-right: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px -1px rgb(0 0 0 / 6%), 0 4px 6px -1px rgb(0 0 0 / 10%);
+}
+
+.search .bi-search {
+    font-size: 18px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.search input {
+    border: 0;
+    font-size: 14px;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sort .bi-filter-left {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+/* footer */
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 35px;
+    z-index: 9;
+    background: var(--link);
+}
+
+@media only screen and (max-width: 1680px) {
+
+    .content-wrapper .row {
+        max-width: 100%;
+    }
+
+    .card-title {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-collapse {
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 98%;
+        left: 0;
+        box-shadow: 0 1px 2px 1px rgb(0 0 0 / 12%);
+        padding: 15px 15px 0;
+        background: var(--white);
+    }
+
+    .nav-tabs {
+        position: static;
+        transform: translate(0, 0);
+        justify-content: center;
+    }
+
+    .nav-tabs .nav-link {
+        border-bottom: 0;
+        border-top: 3px solid transparent;
+        padding: 4px 8px;
+    }
+
+    .nav-tabs .nav-link.active {
+        border-bottom: 0;
+        border-top: 3px solid var(--pink);
+    }
+
+    .nav-tabs .nav-link,
+    .nav-tabs .nav-link.active {
+        color: var(--white);
+    }
+
+    .card figure {
+        width: 100%;
+    }
+
+    .card .card-img-top {
+        max-width: 100%;
+        margin: 0 0 10px;
+    }
+
+    .tab-content .card .card-body {
+        flex-wrap: wrap;
+    }
+
+    .content-wrapper {
+        padding: 15px;
+    }
+
+}
+
+@media only screen and (max-width: 769px) {
+    aside {
+        width: 60px;
+    }
+
+    aside span {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .content-wrapper {
+        margin-left: 60px;
+    }
+
+    .nav-tabs .nav-link {
+        font-size: 13px;
+    }
+}
